@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nav_header_background_image"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/picture"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:background="@drawable/profile_pic_ring_background"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:layout_marginStart="@dimen/_30sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/colorPrimary_text_style_16_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark Zen Admin"
+        android:layout_below="@id/picture"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+
+        />
+
+
+</RelativeLayout>

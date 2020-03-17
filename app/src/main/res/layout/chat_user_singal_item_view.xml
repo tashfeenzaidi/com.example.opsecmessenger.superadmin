@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_weight="1"
+    android:weightSum="3"
+    android:background="@drawable/chat_user_singal_item_background"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:layout_marginHorizontal="@dimen/_10sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            style="@style/heading_style"
+            />
+
+        <TextView
+            android:id="@+id/short_description"
+            android:layout_width="@dimen/_195sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/short_description"
+            android:textColor="@color/lableTextColor"
+            android:textSize="@dimen/_8sdp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dots"
+        android:layout_weight="1"
+        android:layout_marginEnd="@dimen/_15sdp"
+        />
+
+</LinearLayout>

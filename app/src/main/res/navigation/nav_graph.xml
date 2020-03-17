@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/adminFragment">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.opsecmessenger.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.opsecmessenger.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/userAnalytics"
+        android:name="com.example.opsecmessenger.UserAnalytics"
+        android:label="Analytics"
+        tools:layout="@layout/user_analytics_fragment" />
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.opsecmessenger.home"
+        android:label="@string/chat_user"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_home_to_chatUser"
+            app:destination="@id/chatUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.opsecmessenger.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/chatUser"
+        android:name="com.example.opsecmessenger.ChatUser"
+        android:label="Chat User"
+        tools:layout="@layout/chat_user_fragment" >
+        <action
+            android:id="@+id/action_chatUser_to_licenseKey"
+            app:destination="@id/licenseKey" />
+        <action
+            android:id="@+id/action_chatUser_to_noteFragment"
+            app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_chatUser_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.opsecmessenger.EditNoteFragment"
+        android:label="New Note"
+        tools:layout="@layout/fragment_edit_note" />
+
+    <fragment
+        android:id="@+id/licenseKey"
+        android:name="com.example.opsecmessenger.LicenseKey"
+        android:label="License Key"
+        tools:layout="@layout/fragment_license_key" />
+
+    <fragment
+        android:id="@+id/newLicenseKeyFragment"
+        android:name="com.example.opsecmessenger.NewLicenseKeyFragment"
+        android:label="New License"
+        tools:layout="@layout/fragment_new_license_key" />
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.opsecmessenger.NoteFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resellerFragment"
+        android:name="com.example.opsecmessenger.ResellerFragment"
+        android:label="Reseller"
+        tools:layout="@layout/fragment_reseller" />
+    <fragment
+        android:id="@+id/resellersFragment"
+        android:name="com.example.opsecmessenger.ResellersFragment"
+        android:label="Reseller List"
+        tools:layout="@layout/fragment_resellers" />
+    <fragment
+        android:id="@+id/createResellerFragment"
+        android:name="com.example.opsecmessenger.CreateResellerFragment"
+        android:label="New Reseller"
+        tools:layout="@layout/fragment_create_reseller" >
+        <action
+            android:id="@+id/action_createResellerFragment_to_resellersFragment"
+            app:destination="@id/resellersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.opsecmessenger.PurchaseFragment"
+        android:label="Purchase"
+        tools:layout="@layout/fragment_purchase" >
+        <action
+            android:id="@+id/action_purchaseFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.example.opsecmessenger.PaymentMethodFragment"
+        android:label="Choose Payment Method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_paymentSuccessfulFragment"
+            app:destination="@id/paymentSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessfulFragment"
+        android:name="com.example.opsecmessenger.PaymentSuccessfulFragment"
+        android:label="fragment_payment_successful"
+        tools:layout="@layout/fragment_payment_successful" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.opsecmessenger.ResetPasswordFragment"
+        android:label="Create New Password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLanguageFragment"
+        android:name="com.example.opsecmessenger.ChooseLanguageFragment"
+        android:label="Choose Language"
+        tools:layout="@layout/fragment_choose_language" >
+        <action
+            android:id="@+id/action_chooseLanguageFragment_to_home"
+            app:destination="@id/home"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.opsecmessenger.AdminFragment"
+        android:label="Admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_home"
+            app:destination="@id/home"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_adminFragment_to_resellersFragment"
+            app:destination="@id/resellersFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_modifyTokenFragment"
+            app:destination="@id/modifyTokenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyTokenFragment"
+        android:name="com.example.opsecmessenger.ModifyTokenFragment"
+        android:label="fragment_modify_token"
+        tools:layout="@layout/fragment_modify_token" >
+        <action
+            android:id="@+id/action_modifyTokenFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/licenseKeysFragment"
+        android:name="com.example.opsecmessenger.LicenseKeysFragment"
+        android:label="License Keys"
+        tools:layout="@layout/fragment_license_keys" />
+
+</navigation>

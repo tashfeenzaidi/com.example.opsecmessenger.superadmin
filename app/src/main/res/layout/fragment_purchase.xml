@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchaseFragment">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/exchange_rates"
+        style="@style/purchase_screen_text_view_styles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exchange Rates" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exchange_rates"
+        style="@style/purchase_screen_layout_style"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pound"
+                style="@style/colorAccnt_text_style_16_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_46sdp"
+                android:gravity="center"
+                android:text="1 TOKEN = $50" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/colorAccnt_text_style_16_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_46sdp"
+                android:layout_marginStart="@dimen/_38sdp"
+                android:layout_toEndOf="@+id/pound"
+                android:gravity="center"
+                android:text="1 BTC = 0.1" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/add_token_lable"
+        style="@style/purchase_screen_text_view_styles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card1"
+        android:text="Add Tokens" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_card"
+        style="@style/purchase_screen_layout_style"
+        android:layout_width="@dimen/_276sdp"
+        android:layout_height="@dimen/_183sdp"
+        android:layout_below="@+id/add_token_lable"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_115sdp"
+                android:background="@drawable/purchase_screen_card_background"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_24sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tokens"
+                    style="@style/text_style_16_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/small_size_token_icon"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:text="5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/calculate"
+                    style="@style/text_style_16_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tokens"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/new_license_key_button_background"
+                    android:drawableStart="@drawable/ic_remove_circle_primary_dark_24dp"
+                    android:drawableEnd="@drawable/ic_add_circle_primary_dark_24dp"
+                    android:drawablePadding="@dimen/_14sdp"
+                    android:text="5"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_67sdp"
+                android:layout_below="@+id/top"
+                android:background="@drawable/purchase_screen_card_background_bottom"
+                android:padding="@dimen/_14sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lable"
+                    style="@style/colorPrimary_text_style_16_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tokens" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/token"
+                    style="@style/colorPrimary_text_style_10_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lable"
+                    android:text="5 TOKEN =    250" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/number"
+                    style="@style/text_style_30_regular_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/token"
+                    android:layout_alignParentEnd="true"
+                    android:text="5" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <include
+        android:id="@+id/bottom_layout"
+        layout="@layout/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

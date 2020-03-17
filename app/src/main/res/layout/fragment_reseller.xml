@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResellerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                android:id="@+id/name_pic"
+                layout="@layout/chat_user_information_top_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_below="@+id/name_pic"
+                style="@style/resellerFragment_card_style"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/key"
+                        style="@style/colorAccent_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/small_size_key_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Used Keys" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/key"
+                        android:layout_alignParentEnd="true"
+                        android:text="2" />
+
+                    <View
+                        android:id="@+id/divider_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_below="@+id/key"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/borderColor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/available_key"
+                        style="@style/dark_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_horizontal"
+                        android:drawableLeft="@drawable/small_size_key_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Available Keys"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/available_key"
+                        android:layout_alignParentEnd="true"
+                        android:text="5" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_below="@+id/card1"
+                style="@style/resellerFragment_card_style"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/token"
+                        style="@style/colorAccent_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/small_size_token_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Use Tokens" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/token"
+                        android:layout_alignParentEnd="true"
+                        android:text="2" />
+
+                    <View
+                        android:id="@+id/divider_horizontal1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_below="@+id/token"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/borderColor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/available_token"
+                        style="@style/dark_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_horizontal1"
+                        android:drawableLeft="@drawable/small_size_token_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Available Tokens"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/available_token"
+                        android:layout_alignParentEnd="true"
+                        android:text="5" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_below="@+id/card2"
+                style="@style/resellerFragment_card_style"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/blocked_users"
+                        style="@style/colorAccent_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_messege_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Block Users" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/blocked_users"
+                        android:layout_alignParentEnd="true"
+                        android:text="2" />
+
+                    <View
+                        android:id="@+id/divider_horizontal2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_below="@+id/blocked_users"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/borderColor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/available_blocked_users"
+                        style="@style/dark_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_horizontal2"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_messege_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Active Users"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/available_blocked_users"
+                        android:layout_alignParentEnd="true"
+                        android:text="5" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_below="@+id/card3"
+                style="@style/resellerFragment_card_style"
+                android:layout_marginBottom="@dimen/_15sdp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_13sdp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/blocked_reseller"
+                        style="@style/colorAccent_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_disable_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Block Resellers"
+                        android:drawableTint="@color/colorAccent"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/blocked_reseller"
+                        android:layout_alignParentEnd="true"
+                        android:text="2" />
+
+                    <View
+                        android:id="@+id/divider_horizontal3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_below="@+id/blocked_reseller"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/borderColor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/available_blocked_reseller"
+                        style="@style/dark_text_style_14_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider_horizontal3"
+                        android:drawableLeft="@drawable/ic_profile_disable_icon"
+                        android:drawablePadding="@dimen/_15sdp"
+                        android:text="Active Resellers"
+                        android:drawableTint="@color/colorPrimaryDark"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_style_12_regular_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/available_blocked_reseller"
+                        android:layout_alignParentEnd="true"
+                        android:text="5"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

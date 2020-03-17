@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".NewLicenseKeyFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="@dimen/_254sdp"
+        android:layout_height="@dimen/_254sdp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_27sdp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_20sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/keys"
+                style="@style/text_style_16_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:text="Generate Keys"
+                android:layout_centerHorizontal="true"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/number_keys"
+                style="@style/text_style_30_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/_20sdp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/text_style_12_regular_black"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/new_license_key_button_background"
+                android:drawableStart="@drawable/ic_arrow_lessthan_icon"
+                android:drawableEnd="@drawable/ic_arrow_greaterthan_icon"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:text="2"
+                android:layout_below="@+id/number_keys"/>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/generate"
+        android:layout_width="@dimen/_254sdp"
+        android:layout_height="@dimen/_46sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_65sdp"
+        android:background="@drawable/button_drawable"
+        android:elevation="24dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:shadowColor="@android:color/white"
+        android:shadowRadius="50"
+        android:text="Generete"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/_10sdp"
+        android:translationZ="1dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/bottom_gradient_image" />
+</RelativeLayout>

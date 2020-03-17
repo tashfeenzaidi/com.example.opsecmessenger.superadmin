@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatUser">
+
+    <include
+        android:id="@+id/name_pic"
+        layout="@layout/chat_user_information_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/name_pic"
+        android:layout_above="@+id/bottom_navigation"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_25sdp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/note"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:text="Note" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_alignBaseline="@+id/note"
+                android:layout_toStartOf="@+id/divider_vertical"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/lableTextColor"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_plus_sign_icon"
+                android:baselineAlignBottom="true"
+                android:layout_alignBaseline="@+id/note"
+                android:layout_alignParentEnd="true"
+
+                />
+
+            <View
+                android:id="@+id/divider_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/note"
+                />
+
+            <View
+                android:id="@+id/divider_vertical"
+                android:layout_width="1px"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@color/borderColor"
+                android:layout_toStartOf="@+id/plus"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/license_expiration"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="License Expiration "
+                android:layout_below="@+id/divider_horizontal"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/date"
+                style="@style/gary_text_style_8_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="5  Jan  2020"
+                android:layout_below="@+id/license_expiration"/>
+
+            <View
+                android:id="@+id/divider_horizontal1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/date"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/license_key"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="License Key "
+                android:layout_below="@+id/divider_horizontal1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key"
+                style="@style/gary_text_style_8_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV"
+                android:layout_below="@+id/license_key"/>
+
+            <View
+                android:id="@+id/divider_horizontal2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/key"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/app_version"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="App Version"
+                android:layout_below="@+id/divider_horizontal2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/version"
+                style="@style/gary_text_style_8_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="5.13.4os"
+                android:layout_below="@+id/app_version"/>
+
+            <View
+                android:id="@+id/divider_horizontal3"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/version"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/renew"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Renew"
+                android:layout_below="@+id/divider_horizontal3"/>
+
+            <View
+                android:id="@+id/divider_horizontal4"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/renew"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/reset"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Reset"
+                android:layout_below="@+id/divider_horizontal4"/>
+
+            <View
+                android:id="@+id/divider_horizontal5"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/reset"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/blocked_users"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Block Users"
+                android:textColor="@color/dangerColor"
+                android:layout_below="@+id/divider_horizontal5"/>
+
+            <View
+                android:id="@+id/divider_horizontal6"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/blocked_users"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/unenroll"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Unenroll"
+                android:textColor="@color/dangerColor"
+                android:layout_below="@+id/divider_horizontal6"/>
+
+            <View
+                android:id="@+id/divider_horizontal7"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/borderColor"
+                android:layout_below="@+id/unenroll"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/save"
+                style="@style/heading_style_12_bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="@string/save"
+                android:layout_below="@+id/divider_horizontal7"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

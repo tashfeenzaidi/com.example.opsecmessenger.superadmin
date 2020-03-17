@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNoteFragment">
+
+    <RelativeLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_30sdp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/license_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Title"
+            style="@style/gary_text_style_14_bold"
+            android:layout_marginVertical="@dimen/_14sdp"
+            android:background="@android:color/transparent"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider_horizontal"
+            layout="@layout/vertical_divider_veiw"
+            android:layout_below="@+id/license_key"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type Note"
+            style="@style/gary_text_style_14_regular"
+            android:layout_marginVertical="@dimen/_14sdp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/divider_horizontal"
+            android:maxLength="21"
+            android:gravity="left"
+            android:maxLines="2"
+            android:inputType="text|textMultiLine|textCapSentences"
+
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

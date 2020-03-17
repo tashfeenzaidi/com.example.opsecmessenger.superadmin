@@ -1,0 +1,301 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="edit_text_style" parent="AppTheme">
+        <item name="android:layout_width">@dimen/_254sdp</item>
+        <item name="android:layout_height">@dimen/_46sdp</item>
+        <item name="android:background">@drawable/edit_text_button_drawable</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:paddingRight">@dimen/_10sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:translationZ">@dimen/_1sdp</item>
+        <item name="android:elevation">@dimen/_12sdp</item>
+        <item name="android:shadowColor">@android:color/white</item>
+    </style>
+
+    <style name="textView_style" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_46sdp</item>
+        <item name="android:background">@drawable/edit_text_button_drawable</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:translationZ">@dimen/_1sdp</item>
+        <item name="android:elevation">@dimen/_18sdp</item>
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_marginStart">@dimen/_14sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_14sdp</item>
+        <item name="android:layout_marginTop">@dimen/_14sdp</item>
+    </style>
+
+    <style name="lable_style" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="heading_style" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="heading_style_10_bold_black" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="gray_10_bold_style" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="heading_style_12_bold_black" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="sub_heading_style" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="text_style_16_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="black_text_style_16_bold" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="colorPrimary_text_style_16_bold" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="button_style" parent="AppTheme">
+        <item name="android:shadowRadius">50</item>
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:elevation">@dimen/_24sdp</item>
+        <item name="android:background">@drawable/button_drawable</item>
+        <item name="android:layout_width">@dimen/_254sdp</item>
+        <item name="android:layout_height">@dimen/_46sdp</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="colorPrimary_text_style_16_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="text_style_16_regular_blue" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="colorPrimaryDark_style_20_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="colorAccnt_text_style_16_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="gary_text_style_12_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="gary_text_style_8_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="gary_text_style_14_bold" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="colorAccent_text_style_14_bold" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="colorAccent_text_style_14_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="textColor_text_style_14_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="gary_text_style_14_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="dark_text_style_14_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_style_10_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="colorPrimary_text_style_10_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="colorAccent_text_style_10_regular" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="text_style_30_regular_black" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_30sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="text_style_30_regular_blue" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_30sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_style_30_regular_primary" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_30sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="text_style_12_regular_black" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+    </style>
+
+    <style name="text_style_12_regular_dark" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="text_style_12_regular_colorAccent" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+
+    <style name="cardview_backgroud_wholeapp" parent="AppTheme">
+        <item name="cardCornerRadius">@dimen/_20sdp</item>
+        <item name="cardElevation">@dimen/_20sdp</item>
+        <item name="android:fadingEdgeLength">@dimen/_5sdp</item>
+        <item name="background">@drawable/cardview_backgroud_wholeapp</item>
+    </style>
+
+    <style name="cardView_textView_style" parent="AppTheme">
+        <item name="cardCornerRadius">@dimen/_16sdp</item>
+        <item name="cardElevation">@dimen/_20sdp</item>
+        <item name="android:fadingEdgeLength">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="resellerFragment_card_style" parent="AppTheme">
+        <item name="android:layout_marginStart">@dimen/_24sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_24sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="cardCornerRadius">@dimen/_12sdp</item>
+        <item name="cardElevation">@dimen/_24sdp</item>
+
+    </style>
+
+    <style name="reseller_list_item_textView_style" parent="AppTheme">
+        <item name="android:layout_marginEnd">@dimen/_15sdp</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+
+    </style>
+
+    <style name="divider_style" parent="AppTheme">
+        <item name="android:background">@color/borderColor</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+
+    </style>
+
+    <style name="purchase_screen_text_view_styles" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_9sdp</item>
+        <item name="android:layout_marginStart">@dimen/_35sdp</item>
+    </style>
+
+    <style name="purchase_screen_layout_style" parent="AppTheme">
+        <item name="cardCornerRadius">@dimen/_16sdp</item>
+        <item name="cardElevation">@dimen/_20sdp</item>
+        <item name="android:fadingEdgeLength">@dimen/_5sdp</item>
+        <item name="android:layout_width">@dimen/_266sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="admin_home_style" parent="AppTheme">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textColor">@color/lableTextColor</item>
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_15sdp</item>
+
+    </style>
+
+
+</resources>

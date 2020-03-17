@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group"
+        android:checkableBehavior="single"
+        android:enabled="true">
+        <item
+            android:id="@+id/license_key"
+            android:icon="@drawable/ic_nav_icon_key"
+            android:title="License Key" />
+
+        <item
+            android:id="@+id/reseller_list"
+            android:icon="@drawable/ic_nav_icon_list"
+            android:title="Reseller List" />
+
+        <item
+            android:id="@+id/chat_user"
+            android:icon="@drawable/ic_messege_icon"
+            android:title="Chat User"
+            android:iconTint="@color/lableTextColor"/>
+
+        <item
+            android:id="@+id/pass_reset"
+            android:icon="@drawable/ic_nav_icon_pass_reset"
+            android:title="Password Reset" />
+
+        <item
+            android:id="@+id/language"
+            android:icon="@drawable/ic_nav_icon_lang"
+            android:title="Language" />
+
+        <item
+            android:id="@+id/support_chat"
+            android:icon="@drawable/ic_nav_icon_support"
+            android:title="Support Chat" />
+        <item
+            android:id="@+id/modify_token"
+            android:icon="@drawable/ic_token_icon"
+            android:iconTint="@color/lableTextColor"
+            android:title="Modify Token" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_nav_icon_logout"
+
+            />
+    </group>
+
+
+</menu>

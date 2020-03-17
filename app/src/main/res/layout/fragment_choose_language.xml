@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseLanguageFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/card"
+        style="@style/purchase_screen_layout_style"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Bridge"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_15sdp"
+                app:boxBackgroundColor="@color/colorPrimary"
+                app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                app:endIconTint="@color/lableTextColor"
+                app:hintEnabled="true"
+                app:placeholderText="Select language"
+                app:endIconDrawable="@drawable/ic_dropdown_arrow"
+                app:endIconCheckable="true"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/lan_filled_exposed_dropdown"
+                    style="@style/text_style_12_regular_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableStart="@drawable/flag_us"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:backgroundTint="@null"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/bottom_layout"
+        layout="@layout/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

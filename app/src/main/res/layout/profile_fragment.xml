@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="@color/background"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/picture_frame"
+        android:layout_width="@dimen/_76sdp"
+        android:layout_height="@dimen/_76sdp"
+        android:layout_centerHorizontal="true">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_pic_ring_background"
+            android:src="@drawable/ic_account_circle_black_24dp"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_edit_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark Zen"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="@dimen/_20sdp"
+        android:textAllCaps="true"
+        android:textColor="@color/lableTextColor"
+        android:layout_below="@id/picture_frame"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Admin"
+        android:textColor="@color/lableTextColor"
+        android:textSize="@dimen/_12sdp"
+        android:layout_below="@+id/user_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/mid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/user_role">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_name"
+            style="@style/lable_style"
+            android:text="@string/username_label"
+            android:textAllCaps="true" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_name_editText"
+            style="@style/edit_text_style"
+            android:layout_below="@+id/lable_user_name"
+            android:hint="@string/hint" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_password"
+            style="@style/lable_style"
+            android:layout_below="@+id/user_name_editText"
+            android:text="email"
+            android:textAllCaps="true"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_password"
+            style="@style/edit_text_style"
+            android:layout_below="@+id/lable_user_password"
+            android:hint="MarkZolish@Gmail.com" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_phone"
+            style="@style/lable_style"
+            android:layout_below="@+id/user_password"
+            android:text="phone"
+            android:textAllCaps="true" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_phone"
+            style="@style/edit_text_style"
+            android:layout_below="@+id/lable_user_phone"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:hint="202-555-0191" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

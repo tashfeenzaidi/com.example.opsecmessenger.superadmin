@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/search_edit_text_button_drawable"
+            android:drawableRight="@drawable/search_icon"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:hint="Search"
+            android:textColorHint="@color/colorPrimary"
+            android:drawableTint="@color/colorPrimary"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

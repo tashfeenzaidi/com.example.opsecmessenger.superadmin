@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/license_key"
+                style="@style/text_style_12_regular_colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/copy"
+                android:text="D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/delete"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_toStartOf="@+id/copy"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/copy"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_toStartOf="@+id/disturb"
+                android:src="@drawable/ic_content_copy_black_24dp"
+                android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/disturb"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_do_not_disturb_alt_black_24dp"
+                android:layout_centerVertical="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/borderColor"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:id="@+id/license_key"-->
+<!--        style="@style/text_style_12_regular_colorAccent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawablePadding="@dimen/_35sdp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:text="@string/key"-->
+<!--        />-->
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/delete"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_delete_black_24dp"-->
+<!--        />-->
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/copy"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_content_copy_black_24dp"-->
+<!--        />-->
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/disturb"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_do_not_disturb_alt_black_24dp"-->
+<!--        />-->
+
+<!--    <view-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_1sdp"-->
+<!--        android:background="@color/colorAccent" />-->
+
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LicenseKey"
+    android:background="@color/colorPrimary">
+    <RelativeLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_30sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/license_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="License Key"
+            style="@style/text_style_16_regular"
+            android:layout_marginVertical="@dimen/_14sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            style="@style/text_style_16_regular"
+            android:layout_alignBaseline="@+id/license_key"
+            android:layout_alignParentEnd="true"/>
+
+        <View
+            android:id="@+id/divider_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/borderColor"
+            android:layout_below="@+id/license_key"
+            />
+
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textView_style"
+        android:layout_below="@+id/top_container"
+        android:text="D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV"
+        android:visibility="gone"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_container"
+        app:cardElevation="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            android:gravity="center"
+            android:text="D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV"
+            android:textColor="@color/colorAccent"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@drawable/ic_plus_icon"
+            android:backgroundTint="@color/dark"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

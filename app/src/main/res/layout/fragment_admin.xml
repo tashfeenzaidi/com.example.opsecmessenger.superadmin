@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminFragment"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_35sdp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/total_sales"
+                style="@style/admin_home_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total sales"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textColor_text_style_14_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/total_sales"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@drawable/ic_money_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="20"
+                android:textAllCaps="true" />
+
+            <View
+                android:id="@+id/divider_horizontal1"
+                style="@style/divider_style"
+                android:layout_below="@+id/total_sales" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/token"
+                style="@style/admin_home_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider_horizontal1"
+                android:text="token"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textColor_text_style_14_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/token"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@drawable/small_size_token_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="70"
+                android:textAllCaps="true" />
+
+            <View
+                android:id="@+id/divider_horizontal2"
+                style="@style/divider_style"
+                android:layout_below="@+id/token" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sold_keys"
+                style="@style/admin_home_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider_horizontal2"
+                android:text="sold keys"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textColor_text_style_14_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/sold_keys"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@drawable/small_size_key_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="70"
+                android:textAllCaps="true" />
+
+            <View
+                android:id="@+id/divider_horizontal3"
+                style="@style/divider_style"
+                android:layout_below="@+id/sold_keys" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/reseller"
+                style="@style/admin_home_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider_horizontal3"
+                android:text="resellers"
+                android:textAllCaps="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/textColor_text_style_14_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/reseller"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@drawable/ic_active_profile_icon"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="70"
+                android:textAllCaps="true" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/cards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardView"
+        android:gravity="center">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/key_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_125sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/labeled_chat_users"
+                    style="@style/textColor_text_style_14_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableTop="@drawable/ic_chat_user_icon"
+                    android:text="Chat users"
+                    android:textAllCaps="true" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/token_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/key_card_view"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_125sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/labeled_resellers"
+                    style="@style/textColor_text_style_14_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:drawableTop="@drawable/ic_reseller_list_icon"
+                    android:text="Reseller list"
+                    android:textAllCaps="true" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

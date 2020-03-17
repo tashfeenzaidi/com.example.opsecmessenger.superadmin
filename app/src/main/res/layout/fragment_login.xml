@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+       layout="@layout/top_img_layout"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/log_in"
+            android:textAllCaps="true"
+            android:textColor="#3640E0"
+            android:textSize="@dimen/_25sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_name"
+            style="@style/lable_style"
+            android:layout_below="@+id/heading"
+            android:text="@string/username_label" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_name"
+            style="@style/edit_text_style"
+            android:layout_below="@+id/lable_user_name"
+            android:hint="@string/hint" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_password"
+            style="@style/lable_style"
+            android:layout_below="@+id/user_name"
+            android:text="@string/user_password_label" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/user_password"
+            style="@style/edit_text_style"
+            android:layout_below="@+id/lable_user_password"
+            android:drawableRight="@drawable/show"
+            android:hint="@string/hint"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/montserrat"
+            android:text="Forgot password?"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_8sdp" />
+
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
