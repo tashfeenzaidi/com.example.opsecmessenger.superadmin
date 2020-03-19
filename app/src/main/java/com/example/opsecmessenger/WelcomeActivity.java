@@ -28,6 +28,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.bumptech.glide.Glide;
+import com.example.opsecmessenger.adapters.UserRecyclerViewAdapter;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -54,6 +56,7 @@ public class WelcomeActivity extends AppCompatActivity implements
 //        findViewById(R.id.search).setOnClickListener(this);
 
         TabLayout tabLayout = findViewById(R.id.bottom_navigation);
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -182,6 +185,10 @@ public class WelcomeActivity extends AppCompatActivity implements
         NavigationUI.setupWithNavController(navigationView, navController);
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        View view =  navigationView.getHeaderView(0);
+        ImageView imageView = view.findViewById(R.id.picture);
+        Glide.with(this).load(R.drawable.picture).into(imageView);
 
     }
 

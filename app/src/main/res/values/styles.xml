@@ -280,7 +280,7 @@
     </style>
 
     <style name="purchase_screen_layout_style" parent="AppTheme">
-        <item name="cardCornerRadius">@dimen/_16sdp</item>
+        <item name="cardCornerRadius">@dimen/_14sdp</item>
         <item name="cardElevation">@dimen/_20sdp</item>
         <item name="android:fadingEdgeLength">@dimen/_5sdp</item>
         <item name="android:layout_width">@dimen/_266sdp</item>

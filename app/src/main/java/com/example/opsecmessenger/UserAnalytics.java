@@ -35,13 +35,13 @@ public class UserAnalytics extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        View view =  inflater.inflate(R.layout.user_analytics_fragment, container, false);
+        View view = inflater.inflate(R.layout.user_analytics_fragment, container, false);
         viewPager = view.findViewById(R.id.view_pager);
         ArrayList<AnalyticsViewPagerModel> list = new ArrayList<>();
-        list.add(new AnalyticsViewPagerModel("asdf",getResources().getDrawable(R.drawable.ic_active_state_icon)));
-        list.add(new AnalyticsViewPagerModel("asdf",getResources().getDrawable(R.drawable.ic_key_icon)));
-        list.add(new AnalyticsViewPagerModel("asdf",getResources().getDrawable(R.drawable.ic_key_icon)));
-        viewPager.setAdapter(new AnalyticsPagerViewAdapter(viewPager,list));
+        list.add(new AnalyticsViewPagerModel("TOKEN KEY", getResources().getDrawable(R.drawable.ic_active_state_icon)));
+        list.add(new AnalyticsViewPagerModel("SOLD KEYS", getResources().getDrawable(R.drawable.ic_key_icon)));
+        list.add(new AnalyticsViewPagerModel("TOTAL USER", getResources().getDrawable(R.drawable.ic_key_icon)));
+        viewPager.setAdapter(new AnalyticsPagerViewAdapter(viewPager, list));
         viewPager.setOffscreenPageLimit(3);
         viewPager.setClipToPadding(false);
         viewPager.setClipChildren(false);
@@ -49,32 +49,7 @@ public class UserAnalytics extends Fragment {
 
         CompositePageTransformer pageTransformer = new CompositePageTransformer();
         pageTransformer.addTransformer(new MarginPageTransformer(20));
-        pageTransformer.addTransformer((page, position) -> {
 
-            float r = 1 - Math.abs(position);
-//            page.setScaleY((float) (1 + 0.1 * (1 - position)));
-//            page.setScaleX((float) (0.1*(1 - position) + 1));
-
-
-//            page.setScaleY(r);
-//            page.setScaleX(r);
-            page.setScaleY(0.8f + r + 0.7f);
-
-//            int pageWidth = page.getMeasuredWidth() -
-//                    page.getPaddingLeft() - page.getPaddingRight();
-//            int paddingLeft = page.getPaddingLeft();
-//            float transformPos = (float) (page.getLeft() -
-//                    (page.getScrollX() + paddingLeft)) / pageWidth;
-//
-//            if (position < -1){
-//                page.setScaleY(0.8f);
-//            } else if (position <= 1) {
-//                page.setScaleY(1f);
-//            } else {
-//                page.setScaleY(0.8f);
-//            }
-
-        });
 
         viewPager.setPageTransformer(pageTransformer);
         return view;

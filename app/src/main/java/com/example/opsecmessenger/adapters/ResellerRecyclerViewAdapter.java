@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.opsecmessenger.R;
 import com.example.opsecmessenger.models.ResellerModel;
 import com.example.opsecmessenger.models.UserRecyclerViewModel;
@@ -45,7 +46,8 @@ public class ResellerRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
         ((ViewHolder) holder).tokens.setText(String.valueOf(list.get(position).getKeys()));
         ((ViewHolder) holder).messages.setText(String.valueOf(list.get(position).getKeys()));
         ((ViewHolder) holder).profiles.setText(String.valueOf(list.get(position).getKeys()));
-
+        ImageView imageView = ((ViewHolder) holder).picture_frame;
+        Glide.with(mContext).load(R.drawable.picture).into(imageView);
     }
 
     @Override

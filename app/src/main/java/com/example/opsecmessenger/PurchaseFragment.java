@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Currency;
+import java.util.Locale;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +33,7 @@ public class PurchaseFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    private TextView calculator;
+    private TextView calculator, euro;
 
     public PurchaseFragment() {
         // Required empty public constructor
@@ -69,6 +72,9 @@ public class PurchaseFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_purchase, container, false);
         calculator = view.findViewById(R.id.calculate);
+        euro = view.findViewById(R.id.euro);
+        String euroS = Currency.getInstance(Locale.GERMANY).getSymbol();
+        euro.setText("1 TOKEN = "+euroS+"50");
         return view;
     }
 
@@ -92,6 +98,8 @@ public class PurchaseFragment extends Fragment implements View.OnClickListener {
             return false;
         });
 
+
+
 //        calculator.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -99,6 +107,7 @@ public class PurchaseFragment extends Fragment implements View.OnClickListener {
 //                calculator.setText(String.valueOf(add) );
 //            }
 //        });
+
     }
 
     @Override

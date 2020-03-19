@@ -56,6 +56,9 @@
         <action
             android:id="@+id/action_chatUser_to_editNoteFragment"
             app:destination="@id/editNoteFragment" />
+        <action
+            android:id="@+id/action_chatUser_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/editNoteFragment"
@@ -180,5 +183,15 @@
         android:name="com.example.opsecmessenger.LicenseKeysFragment"
         android:label="License Keys"
         tools:layout="@layout/fragment_license_keys" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.opsecmessenger.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password"
+        >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_chatUser"
+            app:destination="@id/chatUser" />
+    </fragment>
 
 </navigation>

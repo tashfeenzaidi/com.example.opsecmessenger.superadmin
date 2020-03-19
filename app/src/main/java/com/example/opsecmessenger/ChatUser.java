@@ -12,7 +12,9 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.opsecmessenger.viewmodels.ChatUserViewModel;
 
 public class ChatUser extends Fragment implements View.OnClickListener{
@@ -33,9 +35,9 @@ public class ChatUser extends Fragment implements View.OnClickListener{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        view.findViewById(R.id.note).setOnClickListener(this);
         view.findViewById(R.id.license_key).setOnClickListener(this);
-        view.findViewById(R.id.plus).setOnClickListener(this);
+        view.findViewById(R.id.change_password).setOnClickListener(this);
+        Glide.with(this).load(R.drawable.profile_pic).into((ImageView) view.findViewById(R.id.picture));
 
     }
 
@@ -62,18 +64,14 @@ public class ChatUser extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.note:
-                Navigation.findNavController(view).navigate(R.id.action_chatUser_to_noteFragment);
-                break;
-
             case R.id.license_key:
                 Navigation.findNavController(view).navigate(R.id.action_chatUser_to_licenseKey);
                 break;
-            case R.id.plus:
-                Navigation.findNavController(view).navigate(R.id.action_chatUser_to_editNoteFragment);
+            case R.id.change_password:
+                Navigation.findNavController(view).navigate(R.id.action_chatUser_to_changePasswordFragment);
                 break;
-
-
         }
+
     }
+
 }

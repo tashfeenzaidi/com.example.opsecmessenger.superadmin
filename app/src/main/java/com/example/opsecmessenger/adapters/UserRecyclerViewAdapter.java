@@ -4,12 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.opsecmessenger.R;
 import com.example.opsecmessenger.models.UserRecyclerViewModel;
 
@@ -39,7 +41,8 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 		// Set the name of the 'NicePlace'
 		((ViewHolder)holder).userName.setText(mUser.get(position).getName());
 		((ViewHolder)holder).shortDescription.setText(mUser.get(position).getShortDescription());
-
+		ImageView imageView = ((ViewHolder) holder).picture_frame;
+		Glide.with(mContext).load(R.drawable.picture).into(imageView);
 	}
 
 	@Override
@@ -50,12 +53,14 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 	private class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
 		private TextView userName, shortDescription;
+		private ImageView picture_frame;
 
 		public ViewHolder(@NonNull View itemView) {
 			super(itemView);
 
 			userName = itemView.findViewById(R.id.user_name);
 			shortDescription = itemView.findViewById(R.id.short_description);
+			picture_frame = itemView.findViewById(R.id.picture_frame);
 			itemView.setOnClickListener(this);
 		}
 

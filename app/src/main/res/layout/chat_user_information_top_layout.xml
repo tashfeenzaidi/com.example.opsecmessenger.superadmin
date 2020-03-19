@@ -58,10 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/view2"
         android:layout_marginStart="@dimen/_28sdp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="@dimen/_7sdp"
         android:background="@drawable/profile_pic_ring_background"
-        android:src="@drawable/ic_account_circle_black_24dp"
-        android:layout_marginBottom="@dimen/_7sdp"/>
-
+        android:src="@drawable/ic_account_circle_black_24dp" />
 
 
 </RelativeLayout>
