@@ -16,6 +16,7 @@
         android:layout_height="@dimen/_48sdp"
         android:src="@drawable/ic_account_circle_black_24dp"
         android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/_5sdp"
         />
 
     <LinearLayout
@@ -46,10 +47,9 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/dots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dots"
+        android:src="@drawable/ic_check_circle_primary_dark_24dp"
         android:layout_weight="1"
         android:layout_marginEnd="@dimen/_15sdp"
         />

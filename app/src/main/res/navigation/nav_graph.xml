@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/adminFragment">
+    app:startDestination="@id/home">
 
     <fragment
         android:id="@+id/fragment_login"
@@ -81,8 +81,12 @@
     <fragment
         android:id="@+id/newLicenseKeyFragment"
         android:name="com.example.opsecmessenger_admin.NewLicenseKeyFragment"
-        android:label="New License"
-        tools:layout="@layout/fragment_new_license_key" />
+        android:label="New License Key"
+        tools:layout="@layout/fragment_new_license_key" >
+        <action
+            android:id="@+id/action_newLicenseKeyFragment_to_generateLicenseKeyFragment"
+            app:destination="@id/generateLicenseKeyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.example.opsecmessenger_admin.NoteFragment"
@@ -211,6 +215,15 @@
         <action
             android:id="@+id/action_addTokenFragment_to_resellerFragment"
             app:destination="@id/resellerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateLicenseKeyFragment"
+        android:name="com.example.opsecmessenger_admin.GenerateLicenseKeyFragment"
+        android:label="Generate License Key"
+        tools:layout="@layout/fragment_generate_license_key" >
+        <action
+            android:id="@+id/action_generateLicenseKeyFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
     </fragment>
 
 </navigation>

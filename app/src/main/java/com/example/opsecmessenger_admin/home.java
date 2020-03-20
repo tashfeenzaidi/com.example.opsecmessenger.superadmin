@@ -31,9 +31,9 @@ public class home extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_home, container, false);
-        mRecyclerView = view.findViewById(R.id.recycler_view);
-        return view;
+            View view =  inflater.inflate(R.layout.fragment_home, container, false);
+            mRecyclerView = view.findViewById(R.id.recycler_view);
+            return view;
     }
 
     @Override

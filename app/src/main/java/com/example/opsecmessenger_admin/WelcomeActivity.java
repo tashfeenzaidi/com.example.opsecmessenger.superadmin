@@ -126,7 +126,7 @@ public class WelcomeActivity extends AppCompatActivity implements
         switch (id) {
 
             case R.id.license_key:
-                navController.navigate(R.id.licenseKeysFragment);
+                navController.navigate(R.id.newLicenseKeyFragment);
                 break;
 
             case R.id.reseller_list:

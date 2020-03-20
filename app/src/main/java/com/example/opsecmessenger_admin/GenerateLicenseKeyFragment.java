@@ -11,18 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-
-import java.util.Currency;
-import java.util.Locale;
-
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ModifyTokenFragment#newInstance} factory method to
+ * Use the {@link GenerateLicenseKeyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ModifyTokenFragment extends Fragment implements View.OnClickListener {
+public class GenerateLicenseKeyFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,7 +27,7 @@ public class ModifyTokenFragment extends Fragment implements View.OnClickListene
     private String mParam1;
     private String mParam2;
 
-    public ModifyTokenFragment() {
+    public GenerateLicenseKeyFragment() {
         // Required empty public constructor
     }
 
@@ -42,11 +37,11 @@ public class ModifyTokenFragment extends Fragment implements View.OnClickListene
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ModifyTokenFragment.
+     * @return A new instance of fragment GenerateLicenseKeyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ModifyTokenFragment newInstance(String param1, String param2) {
-        ModifyTokenFragment fragment = new ModifyTokenFragment();
+    public static GenerateLicenseKeyFragment newInstance(String param1, String param2) {
+        GenerateLicenseKeyFragment fragment = new GenerateLicenseKeyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,25 +62,15 @@ public class ModifyTokenFragment extends Fragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_modify_token, container, false);
-         view.findViewById(R.id.submit).setOnClickListener( this);
-
-         TextView textView = view.findViewById(R.id.exchange_rate);
-        textView.setHint("1 TOKEN = "+ Currency.getInstance(Locale.GERMANY).getSymbol()+"4841.11");
-
-        return view;
+        return inflater.inflate(R.layout.fragment_generate_license_key, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Button submit = view.findViewById(R.id.submit);
-        submit.setText("Modify");
-    }
-
-    @Override
-    public void onClick(View view) {
-        Navigation.findNavController(view).navigate(R.id.action_modifyTokenFragment_to_adminFragment);
+        submit.setText("Generate");
+        submit.setOnClickListener(this);
     }
 
     @Override
@@ -101,4 +86,8 @@ public class ModifyTokenFragment extends Fragment implements View.OnClickListene
         getActivity().findViewById(R.id.bottom_navigation).setVisibility(View.GONE);
     }
 
+    @Override
+    public void onClick(View view) {
+        Navigation.findNavController(view).navigate(R.id.action_generateLicenseKeyFragment_to_adminFragment);
+    }
 }
