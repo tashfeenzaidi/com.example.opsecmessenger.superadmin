@@ -7,27 +7,30 @@
 
     <fragment
         android:id="@+id/fragment_login"
-        android:name="com.example.opsecmessenger.LoginFragment"
+        android:name="com.example.opsecmessenger_admin.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_fragment_login_to_home"
             app:destination="@id/home" />
+        <action
+            android:id="@+id/action_fragment_login_to_adminFragment"
+            app:destination="@id/adminFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.opsecmessenger.ProfileFragment"
+        android:name="com.example.opsecmessenger_admin.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/profile_fragment" />
     <fragment
         android:id="@+id/userAnalytics"
-        android:name="com.example.opsecmessenger.UserAnalytics"
+        android:name="com.example.opsecmessenger_admin.UserAnalytics"
         android:label="Analytics"
         tools:layout="@layout/user_analytics_fragment" />
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.opsecmessenger.home"
+        android:name="com.example.opsecmessenger_admin.home"
         android:label="@string/chat_user"
         tools:layout="@layout/fragment_home">
         <action
@@ -39,12 +42,12 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.opsecmessenger.SearchFragment"
+        android:name="com.example.opsecmessenger_admin.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/chatUser"
-        android:name="com.example.opsecmessenger.ChatUser"
+        android:name="com.example.opsecmessenger_admin.ChatUser"
         android:label="Chat User"
         tools:layout="@layout/chat_user_fragment" >
         <action
@@ -56,27 +59,33 @@
         <action
             android:id="@+id/action_chatUser_to_editNoteFragment"
             app:destination="@id/editNoteFragment" />
+        <action
+            android:id="@+id/action_chatUser_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_chatUser_to_home"
+            app:destination="@id/home" />
     </fragment>
     <fragment
         android:id="@+id/editNoteFragment"
-        android:name="com.example.opsecmessenger.EditNoteFragment"
+        android:name="com.example.opsecmessenger_admin.EditNoteFragment"
         android:label="New Note"
         tools:layout="@layout/fragment_edit_note" />
 
     <fragment
         android:id="@+id/licenseKey"
-        android:name="com.example.opsecmessenger.LicenseKey"
+        android:name="com.example.opsecmessenger_admin.LicenseKey"
         android:label="License Key"
         tools:layout="@layout/fragment_license_key" />
 
     <fragment
         android:id="@+id/newLicenseKeyFragment"
-        android:name="com.example.opsecmessenger.NewLicenseKeyFragment"
+        android:name="com.example.opsecmessenger_admin.NewLicenseKeyFragment"
         android:label="New License"
         tools:layout="@layout/fragment_new_license_key" />
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.example.opsecmessenger.NoteFragment"
+        android:name="com.example.opsecmessenger_admin.NoteFragment"
         android:label="Note"
         tools:layout="@layout/fragment_note" >
         <action
@@ -85,17 +94,21 @@
     </fragment>
     <fragment
         android:id="@+id/resellerFragment"
-        android:name="com.example.opsecmessenger.ResellerFragment"
+        android:name="com.example.opsecmessenger_admin.ResellerFragment"
         android:label="Reseller"
-        tools:layout="@layout/fragment_reseller" />
+        tools:layout="@layout/fragment_reseller" >
+        <action
+            android:id="@+id/action_resellerFragment_to_addTokenFragment"
+            app:destination="@id/addTokenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resellersFragment"
-        android:name="com.example.opsecmessenger.ResellersFragment"
+        android:name="com.example.opsecmessenger_admin.ResellersFragment"
         android:label="Reseller List"
         tools:layout="@layout/fragment_resellers" />
     <fragment
         android:id="@+id/createResellerFragment"
-        android:name="com.example.opsecmessenger.CreateResellerFragment"
+        android:name="com.example.opsecmessenger_admin.CreateResellerFragment"
         android:label="New Reseller"
         tools:layout="@layout/fragment_create_reseller" >
         <action
@@ -104,7 +117,7 @@
     </fragment>
     <fragment
         android:id="@+id/purchaseFragment"
-        android:name="com.example.opsecmessenger.PurchaseFragment"
+        android:name="com.example.opsecmessenger_admin.PurchaseFragment"
         android:label="Purchase"
         tools:layout="@layout/fragment_purchase" >
         <action
@@ -113,7 +126,7 @@
     </fragment>
     <fragment
         android:id="@+id/paymentMethodFragment"
-        android:name="com.example.opsecmessenger.PaymentMethodFragment"
+        android:name="com.example.opsecmessenger_admin.PaymentMethodFragment"
         android:label="Choose Payment Method"
         tools:layout="@layout/fragment_payment_method" >
         <action
@@ -122,12 +135,12 @@
     </fragment>
     <fragment
         android:id="@+id/paymentSuccessfulFragment"
-        android:name="com.example.opsecmessenger.PaymentSuccessfulFragment"
+        android:name="com.example.opsecmessenger_admin.PaymentSuccessfulFragment"
         android:label="fragment_payment_successful"
         tools:layout="@layout/fragment_payment_successful" />
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.example.opsecmessenger.ResetPasswordFragment"
+        android:name="com.example.opsecmessenger_admin.ResetPasswordFragment"
         android:label="Create New Password"
         tools:layout="@layout/fragment_reset_password">
         <action
@@ -139,7 +152,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseLanguageFragment"
-        android:name="com.example.opsecmessenger.ChooseLanguageFragment"
+        android:name="com.example.opsecmessenger_admin.ChooseLanguageFragment"
         android:label="Choose Language"
         tools:layout="@layout/fragment_choose_language" >
         <action
@@ -150,7 +163,7 @@
     </fragment>
     <fragment
         android:id="@+id/adminFragment"
-        android:name="com.example.opsecmessenger.AdminFragment"
+        android:name="com.example.opsecmessenger_admin.AdminFragment"
         android:label="Admin"
         tools:layout="@layout/fragment_admin" >
         <action
@@ -167,9 +180,9 @@
     </fragment>
     <fragment
         android:id="@+id/modifyTokenFragment"
-        android:name="com.example.opsecmessenger.ModifyTokenFragment"
-        android:label="fragment_modify_token"
-        tools:layout="@layout/fragment_modify_token" >
+        android:name="com.example.opsecmessenger_admin.ModifyTokenFragment"
+        android:label="Modify Token"
+        tools:layout="@layout/fragment_modify_token">
         <action
             android:id="@+id/action_modifyTokenFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
@@ -177,8 +190,27 @@
 
     <fragment
         android:id="@+id/licenseKeysFragment"
-        android:name="com.example.opsecmessenger.LicenseKeysFragment"
+        android:name="com.example.opsecmessenger_admin.LicenseKeysFragment"
         android:label="License Keys"
         tools:layout="@layout/fragment_license_keys" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.opsecmessenger_admin.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password"
+        >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_chatUser"
+            app:destination="@id/chatUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTokenFragment"
+        android:name="com.example.opsecmessenger_admin.AddTokenFragment"
+        android:label="Add Token"
+        tools:layout="@layout/fragment_add_token">
+        <action
+            android:id="@+id/action_addTokenFragment_to_resellerFragment"
+            app:destination="@id/resellerFragment" />
+    </fragment>
 
 </navigation>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opsecmessenger_admin.AddTokenFragment"
+    android:gravity="center"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_card"
+        style="@style/purchase_screen_layout_style"
+        android:layout_width="@dimen/_282sdp"
+        android:layout_height="@dimen/_249sdp"
+
+        >
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Token"
+                style="@style/text_style_16_regular"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/_12sdp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tokens"
+                style="@style/text_style_30_regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_below="@+id/heading"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/calculate"
+                style="@style/text_style_16_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/new_license_key_button_background"
+                android:drawableStart="@drawable/ic_remove_circle_primary_dark_24dp"
+                android:drawableEnd="@drawable/ic_add_circle_primary_dark_24dp"
+                android:drawablePadding="@dimen/_14sdp"
+                android:text="5"
+                android:layout_below="@+id/tokens"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit"
+                android:text="Log In"
+                style="@style/button_style"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/_16sdp"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

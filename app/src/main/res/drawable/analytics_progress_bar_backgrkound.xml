@@ -2,7 +2,7 @@
     <item android:id="@android:id/background">
         <shape
             android:shape="ring"
-            android:innerRadius="@dimen/_54sdp"
+            android:innerRadius="@dimen/_44sdp"
             android:thickness="@dimen/_8sdp"
             android:useLevel="false">
 
@@ -14,7 +14,7 @@
         <clip>
             <shape
                 android:shape="ring"
-                android:innerRadius="@dimen/_54sdp"
+                android:innerRadius="@dimen/_44sdp"
                 android:thickness="@dimen/_8sdp"
                 android:useLevel="false">
 

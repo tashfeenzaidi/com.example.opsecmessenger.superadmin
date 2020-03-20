@@ -27,7 +27,7 @@
             android:gravity="center">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/pound"
+                android:id="@+id/euro"
                 style="@style/colorAccnt_text_style_16_regular"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_46sdp"
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_46sdp"
                 android:layout_marginStart="@dimen/_38sdp"
-                android:layout_toEndOf="@+id/pound"
+                android:layout_toEndOf="@+id/euro"
                 android:gravity="center"
                 android:text="1 BTC = 0.1" />
 
@@ -108,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_67sdp"
                 android:layout_below="@+id/top"
+                android:layout_alignParentBottom="true"
                 android:background="@drawable/purchase_screen_card_background_bottom"
                 android:padding="@dimen/_14sdp">
 
