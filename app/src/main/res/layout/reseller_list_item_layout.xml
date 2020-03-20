@@ -1,110 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_82sdp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center">
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_weight="1"
+    android:weightSum="3"
+    android:background="@drawable/chat_user_singal_item_background"
+    android:layout_marginBottom="@dimen/_6sdp"
+    android:layout_marginHorizontal="@dimen/_10sdp">
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_66sdp"
-        app:cardElevation="@dimen/_8sdp"
-        android:layout_marginVertical="@dimen/_5sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
-        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_15sdp"
         >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingHorizontal="@dimen/_15sdp"
-            >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/picture_frame"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_account_circle_black_24dp" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/picture_frame"
-                android:layout_width="@dimen/_48sdp"
-                android:layout_height="@dimen/_48sdp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_account_circle_black_24dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_name"
+            style="@style/heading_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/picture_frame"
+            android:text="@string/user_name"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/user_name"
-                style="@style/heading_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/picture_frame"
-                android:text="@string/user_name"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/keys"
+            style="@style/text_style_12_regular_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:text="2"
+            android:drawableLeft="@drawable/small_size_key_icon"
+            android:layout_toEndOf="@+id/picture_frame"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/keys"
-                style="@style/text_style_12_regular_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_name"
-                android:text="2"
-                android:drawableLeft="@drawable/small_size_key_icon"
-                android:layout_toEndOf="@+id/picture_frame"
-                android:drawablePadding="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tokens"
+            style="@style/text_style_12_regular_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_toEndOf="@id/keys"
+            android:text="2"
+            android:drawableLeft="@drawable/small_size_token_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tokens"
-                style="@style/text_style_12_regular_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_name"
-                android:layout_toEndOf="@id/keys"
-                android:text="2"
-                android:drawableLeft="@drawable/small_size_token_icon"
-                android:drawablePadding="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
+            />
 
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messages"
+            style="@style/text_style_12_regular_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_toEndOf="@id/tokens"
+            android:text="2"
+            android:drawableLeft="@drawable/ic_messege_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/messages"
-                style="@style/text_style_12_regular_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_name"
-                android:layout_toEndOf="@id/tokens"
-                android:text="2"
-                android:drawableLeft="@drawable/ic_messege_icon"
-                android:drawablePadding="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
+            />
 
-                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/profiles"
+            style="@style/text_style_12_regular_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_toEndOf="@id/messages"
+            android:drawableLeft="@drawable/profile_disable_icon"
+            android:text="2"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/profiles"
-                style="@style/text_style_12_regular_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_name"
-                android:layout_toEndOf="@id/messages"
-                android:drawableLeft="@drawable/profile_disable_icon"
-                android:text="2"
-                android:drawableTint="@color/colorAccent"
-                android:drawablePadding="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_15sdp"
+            />
 
-                />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dots"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/dots"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                />
+    </RelativeLayout>
 
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

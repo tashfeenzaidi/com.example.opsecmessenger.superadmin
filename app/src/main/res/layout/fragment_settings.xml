@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_25sdp"
+    android:paddingVertical="@dimen/_15sdp"
+    tools:context="com.example.opsecmessenger_admin.SettingsFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/modify_api"
+        style="@style/textColor_text_style_14_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modify API" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/modify_api"
+        android:layout_marginVertical="@dimen/_15sdp"
+        android:background="@color/divider_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bit_coin_address"
+        style="@style/textColor_text_style_14_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:text="Modify Bitcoin address" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/bit_coin_address"
+        android:layout_marginVertical="@dimen/_15sdp"
+        android:background="@color/divider_color"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/modify_token"
+        style="@style/textColor_text_style_14_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modify Token" 
+        android:layout_below="@+id/divider2"
+        />
+
+</RelativeLayout>

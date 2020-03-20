@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opsecmessenger_admin.ModifyBitcoinFragment">
+
+    <include
+        android:id="@+id/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_layout"
+        android:layout_alignParentBottom="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center_horizontal"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lable_user_name"
+            style="@style/lable_style"
+            android:text="Bitcoin Address" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/exchange_rate"
+            style="@style/edit_text_style"
+            android:layout_below="@id/lable_user_name"
+            android:hint="1L5wSMgerhHg8GZGcsNmAx5EXMRXSKR3He" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

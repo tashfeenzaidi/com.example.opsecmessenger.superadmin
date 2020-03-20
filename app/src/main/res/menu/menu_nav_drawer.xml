@@ -7,8 +7,14 @@
         android:enabled="true">
         <item
             android:id="@+id/license_key"
-            android:icon="@drawable/ic_nav_icon_key"
+            android:icon="@drawable/small_size_key_icon"
+            android:iconTint="@color/lableTextColor"
             android:title="License Key" />
+
+        <item
+            android:id="@+id/admin"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="Admin" />
 
         <item
             android:id="@+id/reseller_list"
@@ -18,8 +24,8 @@
         <item
             android:id="@+id/chat_user"
             android:icon="@drawable/ic_messege_icon"
-            android:title="Chat User"
-            android:iconTint="@color/lableTextColor"/>
+            android:iconTint="@color/lableTextColor"
+            android:title="Chat User" />
 
         <item
             android:id="@+id/pass_reset"
@@ -39,14 +45,19 @@
             android:id="@+id/modify_token"
             android:icon="@drawable/ic_token_icon"
             android:iconTint="@color/lableTextColor"
-            android:title="Modify Token" />
+            android:title="Modify Token"
+            android:visible="false"/>
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_setting_outline_icon"
+            android:title="Setting" />
     </group>
 
     <group>
         <item
             android:id="@+id/logout"
-            android:title="Logout"
             android:icon="@drawable/ic_nav_icon_logout"
+            android:title="Logout"
 
             />
     </group>

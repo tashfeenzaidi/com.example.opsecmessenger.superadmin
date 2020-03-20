@@ -140,30 +140,39 @@ public class WelcomeActivity extends AppCompatActivity implements
             case R.id.license_key:
                 navController.navigate(R.id.newLicenseKeyFragment);
                 break;
+            case R.id.admin:
+                navController.navigate(R.id.home);
+                break;
 
             case R.id.reseller_list:
                 navController.navigate(R.id.resellersFragment);
-
                 break;
 
             case R.id.chat_user:
                 navController.navigate(R.id.home);
                 break;
+
             case R.id.pass_reset:
                 navController.navigate(R.id.resetPasswordFragment);
                 break;
+
             case R.id.language:
                 navController.navigate(R.id.chooseLanguageFragment);
                 break;
+
             case R.id.modify_token:
                 navController.navigate(R.id.modifyTokenFragment);
                 break;
 
-           case R.id.logout:
-                    navController.navigate(R.id.fragment_login);
-                    break;
+            case R.id.logout:
+                navController.navigate(R.id.fragment_login);
+                break;
 
-            }
+            case R.id.setting:
+                navController.navigate(R.id.settingsFragment);
+                break;
+
+        }
         return true;
 
     }
@@ -189,7 +198,7 @@ public class WelcomeActivity extends AppCompatActivity implements
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        View view =  navigationView.getHeaderView(0);
+        View view = navigationView.getHeaderView(0);
         ImageView imageView = view.findViewById(R.id.picture);
         Glide.with(this).load(R.drawable.picture).into(imageView);
 

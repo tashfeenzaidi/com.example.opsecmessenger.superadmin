@@ -230,5 +230,39 @@
         android:name="com.example.opsecmessenger_admin.RoleFragment"
         android:label="Role"
         tools:layout="@layout/fragment_role" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.opsecmessenger_admin.SettingsFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_modifyTokenFragment"
+            app:destination="@id/modifyTokenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_modifyBitcoinFragment"
+            app:destination="@id/modifyBitcoinFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_modifyApiFragment"
+            app:destination="@id/modifyApiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyBitcoinFragment"
+        android:name="com.example.opsecmessenger_admin.ModifyBitcoinFragment"
+        android:label="Modify Bitcoin"
+        tools:layout="@layout/fragment_modify_bitcoin" >
+        <action
+            android:id="@+id/action_modifyBitcoinFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyApiFragment"
+        android:name="com.example.opsecmessenger_admin.ModifyApiFragment"
+        android:label="Modify API"
+        tools:layout="@layout/fragment_modify_api"
+        >
+        <action
+            android:id="@+id/action_modifyApiFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
 
 </navigation>
