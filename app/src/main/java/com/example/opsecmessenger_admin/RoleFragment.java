@@ -2,24 +2,19 @@ package com.example.opsecmessenger_admin;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.NavGraph;
-import androidx.navigation.NavInflater;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AdminFragment#newInstance} factory method to
+ * Use the {@link RoleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AdminFragment extends Fragment implements View.OnClickListener {
+public class RoleFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +24,11 @@ public class AdminFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    public AdminFragment() {
+    //Role identifier variable
+    public static String role;
+
+
+    public RoleFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +38,11 @@ public class AdminFragment extends Fragment implements View.OnClickListener {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AdminFragment.
+     * @return A new instance of fragment RoleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AdminFragment newInstance(String param1, String param2) {
-        AdminFragment fragment = new AdminFragment();
+    public static RoleFragment newInstance(String param1, String param2) {
+        RoleFragment fragment = new RoleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,29 +57,52 @@ public class AdminFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_admin, container, false);
-        view.findViewById(R.id.labeled_chat_users).setOnClickListener(this);
-        view.findViewById(R.id.labeled_resellers).setOnClickListener(this);
-        return view;
+        return inflater.inflate(R.layout.fragment_role, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        view.findViewById(R.id.admin).setOnClickListener(this);
+        view.findViewById(R.id.super_admin).setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        getActivity().findViewById(R.id.bottom_navigation).setVisibility(View.VISIBLE);
+        getActivity().findViewById(R.id.toolbar).setVisibility(View.VISIBLE);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().findViewById(R.id.bottom_navigation).setVisibility(View.GONE);
+        getActivity().findViewById(R.id.toolbar).setVisibility(View.GONE);
     }
 
     @Override
     public void onClick(View view) {
+
         switch (view.getId()){
-            case R.id.labeled_chat_users:
-                Navigation.findNavController(view).navigate(R.id.action_adminFragment_to_home);
-                break;
-            case R.id.labeled_resellers:
-                Navigation.findNavController(view).navigate(R.id.action_adminFragment_to_resellersFragment);
+            case R.id.admin:
+                role = getString(R.string.admin);
                 break;
 
+            case R.id.super_admin:
+                role = getString(R.string.super_admin);
+                break;
         }
+
+
+
     }
 }

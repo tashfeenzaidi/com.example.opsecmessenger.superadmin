@@ -3,6 +3,7 @@ package com.example.opsecmessenger_admin.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,8 +36,7 @@ public class AnalyticsPagerViewAdapter extends RecyclerView.Adapter<AnalyticsPag
     @Override
     public void onBindViewHolder(@NonNull PagerViewHolder holder, int position) {
         holder.textView.setText(list.get(position).getTitle());
-//        holder.textView.setCompoundDrawables(null,null,null,list.get(position).getImage());
-//        holder.textView.getCompoundDrawables()[0].setColorFilter(new PorterDuffColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN));
+        holder.imageView.setImageDrawable(list.get(position).getImage());
 
     }
 
@@ -48,9 +48,12 @@ public class AnalyticsPagerViewAdapter extends RecyclerView.Adapter<AnalyticsPag
     class PagerViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
+        ImageView imageView;
         public PagerViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.item);
+            imageView = itemView.findViewById(R.id.image);
+
         }
     }
 

@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context="com.example.opsecmessenger_admin.RoleFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/admin"
+        style="@style/button_style"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:text="Admin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/super_admin"
+        style="@style/button_style"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:text="Super Admin"
+        android:layout_below="@+id/admin"/>
+
+</RelativeLayout>

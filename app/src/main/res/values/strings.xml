@@ -16,4 +16,6 @@
     <string name="save">Save</string>
     <string name="chat_user">Chat User</string>
     <string name="key">D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV</string>
+    <string name="admin">admin</string>
+    <string name="super_admin">superAdmin</string>
 </resources>

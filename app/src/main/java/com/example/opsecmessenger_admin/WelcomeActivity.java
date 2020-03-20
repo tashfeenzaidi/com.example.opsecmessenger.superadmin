@@ -14,7 +14,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
+import androidx.navigation.NavInflater;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.bumptech.glide.Glide;
@@ -74,6 +77,15 @@ public class WelcomeActivity extends AppCompatActivity implements
             }
         });
 
+//        NavHostFragment navHost = (NavHostFragment)  getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+//        NavController navController = navHost.getNavController();
+//
+//        NavInflater navInflater = navController.getNavInflater();
+//        NavGraph graph = navInflater.inflate(R.navigation.nav_graph);
+//
+//        graph.setStartDestination(R.id.adminFragment);
+//
+//        navController.setGraph(graph);
     }
 
     @Override

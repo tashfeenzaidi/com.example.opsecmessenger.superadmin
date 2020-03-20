@@ -15,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.opsecmessenger_admin.adapters.AnalyticsPagerViewAdapter;
 import com.example.opsecmessenger_admin.models.AnalyticsViewPagerModel;
@@ -26,6 +27,7 @@ public class UserAnalytics extends Fragment {
 
     private UserAnalyticsViewModel mViewModel;
     ViewPager2 viewPager;
+    TextView textView;
 
     public static UserAnalytics newInstance() {
         return new UserAnalytics();
@@ -37,10 +39,11 @@ public class UserAnalytics extends Fragment {
 
         View view = inflater.inflate(R.layout.user_analytics_fragment, container, false);
         viewPager = view.findViewById(R.id.view_pager);
+        textView = view.findViewById(R.id.content);
         ArrayList<AnalyticsViewPagerModel> list = new ArrayList<>();
         list.add(new AnalyticsViewPagerModel("TOKEN KEY", getResources().getDrawable(R.drawable.ic_active_state_icon)));
         list.add(new AnalyticsViewPagerModel("SOLD KEYS", getResources().getDrawable(R.drawable.ic_key_icon)));
-        list.add(new AnalyticsViewPagerModel("TOTAL USER", getResources().getDrawable(R.drawable.ic_key_icon)));
+        list.add(new AnalyticsViewPagerModel("TOTAL USER", getResources().getDrawable(R.drawable.ic_active_profile_icon)));
         viewPager.setAdapter(new AnalyticsPagerViewAdapter(viewPager, list));
         viewPager.setOffscreenPageLimit(3);
         viewPager.setClipToPadding(false);
@@ -52,6 +55,7 @@ public class UserAnalytics extends Fragment {
 
 
         viewPager.setPageTransformer(pageTransformer);
+        viewPager.setCurrentItem(1);
         return view;
 
     }
@@ -60,7 +64,22 @@ public class UserAnalytics extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(UserAnalyticsViewModel.class);
-        // TODO: Use the ViewModel
+
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                if (viewPager.getCurrentItem() == 1){
+                    textView.setText("sold keys");
+                }else if (viewPager.getCurrentItem() == 2){
+                    textView.setText("total users");
+
+                }else {
+                    textView.setText("token key");
+
+                }
+            }
+        });
 
     }
 

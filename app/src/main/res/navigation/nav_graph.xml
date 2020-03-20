@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/home">
+    app:startDestination="@id/adminFragment">
 
     <fragment
         android:id="@+id/fragment_login"
@@ -225,5 +225,10 @@
             android:id="@+id/action_generateLicenseKeyFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/roleFragment"
+        android:name="com.example.opsecmessenger_admin.RoleFragment"
+        android:label="Role"
+        tools:layout="@layout/fragment_role" />
 
 </navigation>

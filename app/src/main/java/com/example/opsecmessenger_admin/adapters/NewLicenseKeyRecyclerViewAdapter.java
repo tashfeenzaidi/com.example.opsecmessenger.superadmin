@@ -44,8 +44,6 @@ public class NewLicenseKeyRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
 		ImageView imageView = ((ViewHolder) holder).picture_frame;
 		Glide.with(mContext).load(R.drawable.picture).into(imageView);
 
-
-
 	}
 
 	@Override
@@ -65,11 +63,11 @@ public class NewLicenseKeyRecyclerViewAdapter extends RecyclerView.Adapter<Recyc
 			shortDescription = itemView.findViewById(R.id.short_description);
 			picture_frame = itemView.findViewById(R.id.picture_frame);
 			itemView.setOnClickListener(this);
+
 		}
 
 		@Override
 		public void onClick(View view) {
-			Navigation.findNavController(view).navigate(R.id.action_home_to_chatUser);
 		}
 	}
 
